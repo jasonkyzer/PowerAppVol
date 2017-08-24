@@ -3,6 +3,11 @@
 #Jason Kyzer
 #jkyzer@vmware.com
 
+$hash=@{"username" = "administrator";"password" = "VMware123!"}
+irm -method post -uri https://appvolapi/cv_api/sessions -sess cookie -body
+ $hash -Verbose
+ 
+
 function open-avsession ($avm,$user,$pass)
 
 
